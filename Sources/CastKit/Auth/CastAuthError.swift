@@ -1,0 +1,55 @@
+import Foundation
+
+/// A failed device-authentication check. Errors never contain certificate or signature bytes.
+public enum CastAuthError: Error, Sendable, Equatable {
+    case requiresBackgroundVerification
+    case inputTooLarge
+    case invalidVerificationTime
+    case malformedTLSCertificate
+    case tlsCertificateNotYetValid
+    case tlsCertificateExpired
+    case tlsCertificateLifetimeTooLong
+    case missingNonce
+    case nonceMismatch
+    case invalidNonceLength
+    case malformedDeviceCertificate
+    case malformedIntermediateCertificate
+    case malformedTrustedRoot
+    case untrustedDeviceChain
+    case invalidCertificateSignatureAlgorithm
+    case unsupportedCertificateSignatureAlgorithm
+    case invalidCertificateSignature
+    case invalidPublicKey
+    case nonRSADeviceKey
+    case insufficientRSAKeySize
+    case unsupportedEllipticCurve
+    case certificateNotYetValid
+    case certificateExpired
+    case invalidIssuerConstraints
+    case pathLengthExceeded
+    case unsupportedCriticalExtension
+    case malformedCertificateExtension
+    case invalidExtendedKeyUsage
+    case missingDigitalSignatureKeyUsage
+    case missingCommonName
+    case invalidNameConstraints
+    case invalidCertificatePolicy
+    case missingCRL
+    case malformedCRL
+    case unsupportedCRLVersion
+    case missingCRLSignature
+    case missingCRLSignerCertificate
+    case malformedCRLSigner
+    case nonRSACRLSignerKey
+    case untrustedCRLSigner
+    case invalidCRLSignature
+    case crlNotYetValid
+    case crlExpired
+    case invalidCRLSerialRange
+    case invalidCRLHash
+    case revokedPublicKey
+    case revokedSerialNumber
+    case emptySignature
+    case invalidSignature
+    case audioOnlyDeviceAdvertisesVideo
+}
